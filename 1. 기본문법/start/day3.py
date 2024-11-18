@@ -36,3 +36,37 @@ print(player2.h);
 
 
 # player2.shoot(2);
+
+# 상속
+class Human:
+  def __init__(self, weight, height):
+    self.w = weight;
+    self.h = height;
+
+  def walk(self):
+    print("걷습니다.");
+
+h1 = Human(60,120);
+h1.walk();
+
+class Athelte(Human):
+  def __init__(self, weight, height, fat_rate=10):
+    super().__init__(weight, height)
+    self.fat_rate = fat_rate
+
+  def workout(self):
+    print("운동을 합니다.");
+
+h2 = Athelte(50,100);
+h2.walk();
+
+h3 = Athelte(50,100,11);
+h3.workout();
+
+class SoccerPalyer(Athelte):
+  # 덮어씌우기
+  def workout(self):
+    print("축구를 한다.");
+
+h4 = SoccerPalyer(50,180,30);
+h4.workout();
