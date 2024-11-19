@@ -70,3 +70,39 @@ class SoccerPalyer(Athelte):
 
 h4 = SoccerPalyer(50,180,30);
 h4.workout();
+
+# 클래스 관점에서 바라보는 파이썬 자료형
+a = [1,2,3];
+a.append(4);
+print(a);
+
+c = {"c" : 123, "d": "aaa"};
+print(c.keys());
+
+class SP:
+  def __init__(self, weight):
+    self.weight = weight;
+  
+a = SP(10);
+print(a.weight);
+
+a1 = SP([100,10,90]);
+print(a1.weight)
+
+class SC:
+  def __init__(self, numY):
+    self.numY = numY
+
+class Team:
+  def __init__(self, coach, playerList):
+    self.coach = coach
+    self.playerList = playerList
+
+pl1 = SP(70);
+pl2 = SP(80)
+
+coach = SC(10);
+
+team = Team(coach=coach, playerList=[pl1,pl2]);
+print(team.coach.numY)
+print(team.playerList[0].weight)
